@@ -9,4 +9,4 @@ RUN apk --no-cache add tar
 
 RUN curl -L https://api.github.com/repos/mlewand/home-assistant/tarball/${custom_branch_name} | tar xz --strip-components=1 -C /usr/src/homeassistant --wildcards '*/homeassistant/components/recorder/*'
 
-CMD python3 -m homeassistant --config /config --skip-pip
+CMD python3 -m homeassistant --config /config
